@@ -52,6 +52,7 @@ mapping_list = {
 
 @app.get("/tables")
 def get_tables():
+    print("hello world3")
     return {"tables": list(mapping_list.keys())}
 
 @app.get("/tables/{table_name}/explanation")

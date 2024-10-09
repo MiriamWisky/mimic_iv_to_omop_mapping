@@ -18,10 +18,13 @@ function App() {
   useEffect(() => {
     // שליפת רשימת הטבלאות מהשרת
     axios.get(`${apiUrl}/tables`)
+    
       .then(response => {
+        console.log("hello world1");
         setTables(response.data.tables);
       })
       .catch(error => {
+        console.log("hello world2");
         console.error('There was an error fetching the tables!', error);
       });
   }, []);
