@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Typography, Select, MenuItem, FormControl, InputLabel, Box, Card, CardContent } from '@mui/material';
 
+
+
 function App() {
+
+  const apiUrl = "https://mimic-iv-to-omop-mapping-server.onrender.com";
+
   const [tables, setTables] = useState([]);
   const [selectedTable, setSelectedTable] = useState('');
   const [explanation, setExplanation] = useState('');
@@ -12,7 +17,7 @@ function App() {
 
   useEffect(() => {
     // שליפת רשימת הטבלאות מהשרת
-    axios.get('http://localhost:8000/tables')
+    axios.get(`${apiUrl}/tables`)
       .then(response => {
         setTables(response.data.tables);
       })
@@ -24,7 +29,7 @@ function App() {
   const handleTableSelect = (table) => {
     setSelectedTable(table);
     // שליפת ההסבר של הטבלה
-    axios.get(`http://localhost:8000/tables/${table}/explanation`)
+    axios.get(`${apiUrl}/tables/${table}/explanation`)
       .then(response => {
         setExplanation(response.data.explanation);
       })
@@ -33,7 +38,7 @@ function App() {
       });
 
     // שליפת העמודות של הטבלה
-    axios.get(`http://localhost:8000/tables/${table}/columns`)
+    axios.get(`${apiUrl}/tables/${table}/columns`)
       .then(response => {
         setColumns(response.data.columns);
       })
@@ -45,7 +50,7 @@ function App() {
   const handleColumnSelect = (column) => {
     setSelectedColumn(column);
     // שליפת המיפוי של העמודה
-    axios.get(`http://localhost:8000/tables/${selectedTable}/columns/${column}`)
+    axios.get(`${apiUrl}/tables/${selectedTable}/columns/${column}`)
       .then(response => {
         setColumnMapping(response.data.mapping);
       })
