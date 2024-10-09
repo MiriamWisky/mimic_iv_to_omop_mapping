@@ -8,10 +8,14 @@ app = FastAPI()
 # הוספת Middleware עבור CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # ניתן להחליף בכתובות ספציפיות לפי הצורך
+    allow_origins=[
+    "https://mimic-to-omop-mapping.onrender.com",  # צד הלקוח בפרודקשן
+    "http://localhost:3000"  # צד הלקוח בסביבת הפיתוח
+],  # ניתן להחליף בכתובות ספציפיות לפי הצורך
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
+
 )
 
 # מילון הנתונים מהשאלה הקודמת
