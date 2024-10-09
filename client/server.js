@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = parseInt(process.env.PORT, 10) || 3000;
+
 
 // משרת את הקבצים הסטטיים מתוך תיקיית build
 app.use(express.static(path.join(__dirname, 'build')));
