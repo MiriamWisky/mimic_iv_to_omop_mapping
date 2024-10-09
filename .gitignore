@@ -1,0 +1,9 @@
+# Node modules (client)
+client/node_modules
+
+# Python virtual environment (server)
+server/venv
+
+# IDE files
+.vscode/
+.idea/
