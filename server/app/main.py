@@ -87,7 +87,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://mimic-to-omop-mapping.onrender.com",  # צד הלקוח בפרודקשן
-        "http://localhost:3000"  # צד הלקוח בסביבת הפיתוח
+        "http://localhost:3000",  # צד הלקוח בסביבת הפיתוח
+        "http://127.0.0.1:3000" # backend server in docker container
     ],
     allow_credentials=True,
     allow_methods=["GET", "POST", "OPTIONS"],
