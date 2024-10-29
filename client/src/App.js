@@ -6,7 +6,7 @@ import { Container, Typography, Select, MenuItem, FormControl, InputLabel, Box, 
 
 function App() {
 
-  const apiUrl = "http://localhost:8001"; // for loacalhost development
+  const apiUrl = "http://localhost:8000"; // for loacalhost development
 
   const [tables, setTables] = useState([]);
   const [selectedTable, setSelectedTable] = useState('');
