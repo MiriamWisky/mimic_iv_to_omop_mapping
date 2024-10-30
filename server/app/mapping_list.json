@@ -29,11 +29,11 @@
     },
     "transfers": {
         "subject_id": ["person_id/nTable: visit_detail"],
-        "hadm_id": ["visit_occurrence_id/nTable: visit_detail"],
-        "transfer_id": ["visit_detail_id/nTable: visit_detail"],
-        "careunit": ["care_site_source_value/nTable: cere_site"],
-        "intime": ["visit_detail_start_datetime/nTable: visit_detail"],
-        "outtime": ["visit_detail_end_datetime/nTable: visit_detail"],
+        "hadm_id": ["visit_occurrence_id<br>Table: visit_detail"],
+        "transfer_id": ["visit_detail_id<br>Table: visit_detail"],
+        "careunit": ["care_site_source_value<br>Table: cere_site"],
+        "intime": ["visit_detail_start_datetime<br>Table: visit_detail"],
+        "outtime": ["visit_detail_end_datetime<br>Table: visit_detail"],
         "explanation": "This table represent... this table is represented in OMOP by the <strong>VISIT_DETAIL</strong> table."
 
 }
