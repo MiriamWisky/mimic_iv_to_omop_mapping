@@ -14,7 +14,7 @@
         "explanation": "This table encodes the patient's hospitalization table, the hospitalization table in OMOP is the <strong>VISIT_OCCURENCE</strong> table"
     },
     "d_icd_diagnoses": {
-        "icd_code": [" to concept_code <br>Table: concept"],
+        "icd_code": ["concept_code <br>Table: concept"],
         "icd_version": ["vocabulary_id<br>Table: concept"],
         "long_title": ["concept_name<br>Table: concept"],
         "explanation": "This table represents the data on the icd codes, this table is represented in OMOP by the <strong>CONCEPT</strong> table."
