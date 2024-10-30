@@ -26,5 +26,14 @@
         "icd_code": ["condition_source_value<br>Table: condition_occurrence"],
         "icd_version": ["condition_source_concept_id<br>Table: condition_occurrence"],
         "explanation": "This table represents the patient diagnosis data, this table is represented in OMOP by the <strong>CONDITION_OCCURENCE</strong> table."
-    }
+    },
+    "transfers": {
+        "subject_id": ["person_id/nTable: visit_detail"],
+        "hadm_id": ["visit_occurrence_id/nTable: visit_detail"],
+        "transfer_id": ["visit_detail_id/nTable: visit_detail"],
+        "careunit": ["care_site_source_value/nTable: cere_site"],
+        "intime": ["visit_detail_start_datetime/nTable: visit_detail"],
+        "outtime": ["visit_detail_end_datetime/nTable: visit_detail"],
+        "explanation": "This table represent... this table is represented in OMOP by the <strong>VISIT_DETAIL</strong> table."
+
 }
